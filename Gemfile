@@ -64,5 +64,5 @@ gem 'foreman', '~> 0.87.2'
 gem 'simple_calendar', '~> 2.4', '>= 2.4.1'
 gem 'trix', '~> 0.9.9'
 gem 'stripe', '~> 4.0', '>= 4.0.2'  # probably dont need stripe
-gem 'bootstrap', '~> 5.0.0.alpha3'
+
 #-----------------------------------------------------------------

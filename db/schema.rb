@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_12_05_024307) do
 
   create_table "reservations", force: :cascade do |t|
     t.integer "SeatCount", limit: 8, default: 2
-    t.integer "TableCount", limit: 10
+    t.integer "TableCount"
     t.datetime "start_time"
     t.datetime "end_time"
     t.string "ResName"

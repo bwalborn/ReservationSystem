@@ -1,0 +1,9 @@
+<%= month_calendar events: reservations do | date, reservations | %>
+    <%= date %>
+    <% reservations.each do | reservation | %>
+        <div>
+            <%= link_to reservation.ResName, reservation, class: "link" %>
+        </div>
+    <% end %>
+
+<% end %>

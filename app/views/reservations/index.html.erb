@@ -1,37 +1,8 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Reservations</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Seatcount</th>
-      <th>Tablecount</th>
-      <th>Start time</th>
-      <th>End time</th>
-      <th>Resname</th>
-      <th>Phonenumber</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @reservations.each do |reservation| %>
-      <tr>
-        <td><%= reservation.SeatCount %></td>
-        <td><%= reservation.TableCount %></td>
-        <td><%= reservation.start_time %></td>
-        <td><%= reservation.end_time %></td>
-        <td><%= reservation.ResName %></td>
-        <td><%= reservation.PhoneNumber %></td>
-        <td><%= link_to 'Show', reservation %></td>
-        <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
-        <td><%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Reservation', new_reservation_path %>
+<div class="container m-auto my-4">
+  <% unless @reservations %>
+  <%= render "reservations_cta"  %>
+  <% else %>
+  <%= render "reservations_landing", reservations: @reservations %>
+  <% end %>
+</div>
